@@ -1,46 +1,43 @@
-recompose-relay
-===============
+recompose-relay-modern
+======================
 
-[![npm version](https://img.shields.io/npm/v/recompose-relay.svg?style=flat-square)](https://www.npmjs.com/package/recompose-relay)
 
-[Recompose](https://github.com/acdlite/recompose) helpers for [Relay](https://facebook.github.io/relay).
+[Recompose](https://github.com/acdlite/recompose) helpers for [Relay](https://facebook.github.io/relay). Adapted from [recompose-relay](https://www.npmjs.com/package/recompose-relay)
 
 ```
-npm install --save recompose-relay
+npm install --save recompose-relay-modern
 ```
 
 ## API
 
-### `createContainer()`
+### `createFragmentContainer()`
 
 ```js
-createContainer(
+createFragmentContainer(
   specification: Object,
   BaseComponent: ReactElementType
 ): ReactElementType
 ```
 
-A curried, component-last version of `Relay.createContainer()`. This makes it composable with other Recompose helpers.
+A curried, component-last version of `Relay.createFragmentContainer()`. This makes it composable with other Recompose helpers.
 
 If the base component is not a class component, it is converted to one using `toClass()`. This allows Relay to add a ref to the base component without causing React to print a warning. (Function components cannot have refs.) This behavior will be removed once Relay updates to support function components.
 
-Tip: Use `flattenProp()` in combination with `createContainer()` to flatten fragment props:
+Tip: Use `flattenProp()` in combination with `createFragmentContainer()` to flatten fragment props:
 
 ```js
 const Post = compose(
-  createContainer({
-    fragments: {
-      post: () => Relay.QL`
-        fragment on Post {
-          title,
-          content,
-          author {
-            name
-          }
+  createFragmentContainer(
+    graphql`
+      fragment on Post {
+        title,
+        content,
+        author {
+          name
         }
-      `
-    }
-  }),
+      }
+    `
+  ),
   flattenProp('post')
 )(({ title, content, author }) => (
   <article>

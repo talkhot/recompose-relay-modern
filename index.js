@@ -1,1 +1,1 @@
-export { default as createContainer } from './createContainer'
+export { createFragmentContainer } from './createFragmentContainer'

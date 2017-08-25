@@ -1,5 +1,6 @@
 {
-  "description": "Recompose helpers for Relay.",
+  "name": "recompose-relay-modern",
+  "description": "Recompose helpers for Relay Modern.",
   "scripts": {
     "update-schema": "node -r babel-core/register updateSchema.js"
   },
@@ -22,6 +23,6 @@
   "peerDependencies": {
     "recompose": "^0.17.0 || ^0.18.0 || ^0.19.0 || ^0.20.0",
     "react": "^0.14.0 || ^15.0.0",
-    "react-relay": "^0.6.0 || ^0.7.0 || ^0.8.0 || ^0.9.0"
+    "react-relay": "^1.0.0"
   }
 }
