@@ -1,4 +1,4 @@
-import ceateFragmentContainer from './ceateFragmentContainer'
+import ceateFragmentContainer from './createFragmentContainer'
 
 export default {
   fragmentContainer: ceateFragmentContainer,
