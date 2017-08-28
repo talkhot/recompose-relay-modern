@@ -10,10 +10,10 @@ npm install --save recompose-relay-modern
 
 ## API
 
-### `createFragmentContainer()`
+### `fragmentContainer()`
 
 ```js
-createFragmentContainer(
+fragmentContainer(
   specification: Object,
   BaseComponent: ReactElementType
 ): ReactElementType
@@ -23,11 +23,11 @@ A curried, component-last version of `Relay.createFragmentContainer()`. This mak
 
 If the base component is not a class component, it is converted to one using `toClass()`. This allows Relay to add a ref to the base component without causing React to print a warning. (Function components cannot have refs.) This behavior will be removed once Relay updates to support function components.
 
-Tip: Use `flattenProp()` in combination with `createFragmentContainer()` to flatten fragment props:
+Tip: Use `flattenProp()` in combination with `fragmentContainer()` to flatten fragment props:
 
 ```js
 const Post = compose(
-  createFragmentContainer(
+  fragmentContainer(
     graphql`
       fragment on Post {
         title,
