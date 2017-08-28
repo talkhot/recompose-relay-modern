@@ -1,5 +1,5 @@
 import ceateFragmentContainer from './createFragmentContainer'
 
-export default {
+module.exports = {
   fragmentContainer: ceateFragmentContainer,
 }
