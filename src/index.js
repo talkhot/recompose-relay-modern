@@ -1,1 +1,5 @@
-export { fragmentContainer } from './fragmentContainer'
+import ceateFragmentContainer from './ceateFragmentContainer'
+
+export default {
+  fragmentContainer: ceateFragmentContainer,
+}
