@@ -53,7 +53,7 @@ A curried, component-last version of `Relay.createPaginationContainer()`.
 
 ```js
 paginationContainer(
-  fragments: Object,
+  specification: Object,
   connectionConfig: Object,
   BaseComponent: ReactElementType
 ): ReactElementType
