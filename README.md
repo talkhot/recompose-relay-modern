@@ -47,3 +47,6 @@ const Post = compose(
   </article>
 ));
 ```
+
+### `paginationContainer()`
+A curried, component-last version of `Relay.createPaginationContainer()`. This makes it composable with other Recompose helpers.
