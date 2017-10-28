@@ -1,5 +1,7 @@
-import ceateFragmentContainer from './createFragmentContainer'
+import createFragmentContainer from './createFragmentContainer'
+import createPaginationContainer from './createPaginationContainer';
 
 module.exports = {
-  fragmentContainer: ceateFragmentContainer,
+  fragmentContainer: createFragmentContainer,
+  paginationContainer: createPaginationContainer,
 }
