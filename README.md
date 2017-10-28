@@ -49,4 +49,12 @@ const Post = compose(
 ```
 
 ### `paginationContainer()`
-A curried, component-last version of `Relay.createPaginationContainer()`. This makes it composable with other Recompose helpers.
+A curried, component-last version of `Relay.createPaginationContainer()`.
+
+```js
+paginationContainer(
+  fragments: Object,
+  connectionConfig: Object,
+  BaseComponent: ReactElementType
+): ReactElementType
+```
