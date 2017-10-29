@@ -47,3 +47,14 @@ const Post = compose(
   </article>
 ));
 ```
+
+### `paginationContainer()`
+A curried, component-last version of `Relay.createPaginationContainer()`.
+
+```js
+paginationContainer(
+  specification: Object,
+  connectionConfig: Object,
+  BaseComponent: ReactElementType
+): ReactElementType
+```
