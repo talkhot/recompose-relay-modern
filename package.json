@@ -1,6 +1,6 @@
 {
   "name": "recompose-relay-modern",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Recompose helpers for Relay Modern.",
   "scripts": {
     "build": "rm -f -R dist && babel -d dist src",
