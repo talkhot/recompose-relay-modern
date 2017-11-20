@@ -1,4 +1,4 @@
-# Relay-compose
+# recompose-relay-modern
 
 This is a HOC for relay modern to work with сomposable react components.
 
@@ -6,12 +6,12 @@ You probably want to use this when you work with smart and dumb components and y
 
 # Setup
 
-`npm install --save relay-compose`
+`npm install --save recompose-relay-modern`
 
 Set relay [environment](https://facebook.github.io/relay/docs/relay-environment.html) using `setEnvironment` in your enty point. For example in `client.js`:
 
 ```js
-import { setEnviroment } from 'relay-compose';
+import { setEnviroment } from 'recompose-relay-modern';
 import relayEnv from './createRelayEnvironment'
 
 setEnviroment(relayEnv);
@@ -26,7 +26,7 @@ And now you are ready to use it.
 import {
   graphql,
 } from 'react-relay';
-import { fragmentContainer } from 'relay-compose';
+import { fragmentContainer } from 'recompose-relay-modern';
 
 import Persons from './Persons';
 
@@ -47,7 +47,7 @@ export default compose(
 import {
   graphql,
 } from 'react-relay';
-import { queryRenderer } from 'relay-compose';
+import { queryRenderer } from 'recompose-relay-modern';
 
 import PersonsInfoPage from './PersonsInfoPage';
 import { PersonsContainer } from '../Persons';
@@ -69,7 +69,7 @@ export default compose(
 ## Mutations
 
 ```js
-import { createMutation } from 'relay-compose';
+import { createMutation } from 'recompose-relay-modern';
 
 export default compose(
   mapProps(props => ({
@@ -92,7 +92,7 @@ export default compose(
 ## RefetchContainer
 
 ```js
-import { queryRenderer, refetchContainer } from 'relay-compose';
+import { queryRenderer, refetchContainer } from 'recompose-relay-modern';
 
 export default compose(
   queryRenderer(graphql`
@@ -129,7 +129,7 @@ export default compose(
 ## PaginationContainer
 
 ```js
-import { queryRenderer, paginationContainer } from 'relay-compose';
+import { queryRenderer, paginationContainer } from 'recompose-relay-modern';
 
 export default compose(
   queryRenderer(
@@ -176,6 +176,3 @@ export default compose(
   }),
 )(Test);
 ```
-
-# Information
-This project is still in WIP. You are welcome to participate to it.
